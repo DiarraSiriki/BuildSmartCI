@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap');
+
+/* ===========================
+   BASE
+=========================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #EDE8E0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+header {
+    background-color: #EAD4B9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin-left: 50px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #70949E;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #E07B39;
+}
+
+/* ===========================
+   MAIN
+=========================== */
+main {
+    flex: 1;
+    padding-bottom: 3rem;
+}
+
+/* ===========================
+   HERO
+=========================== */
+.hero {
+    text-align: center;
+    padding: 3rem 2rem 2rem;
+}
+
+.hero-icon {
+    width: 96px;
+    height: 96px;
+    background: #1A1A1A;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.hero-icon svg {
+    width: 44px;
+    height: 44px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: #1A1A1A;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    color: #6B6560;
+    font-weight: 300;
+}
+
+/* ===========================
+   CARD FORMULAIRE
+=========================== */
+.card {
+    background: #FAFAF8;
+    border-radius: 20px;
+    margin: 1.5rem auto 0;
+    padding: 2rem 2.5rem;
+    max-width: 680px;       /* ✅ corrigé : était 2000px */
+    width: calc(100% - 2rem);
+}
+
+/* ===========================
+   CHAMPS
+=========================== */
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #3A3530;
+    margin-bottom: 6px;
+}
+
+.field label .req,
+.req {
+    color: #D85A30;
+    margin-left: 3px;
+}
+
+.field select,
+.field input[type="text"] {
+    width: 100%;
+    background: #EFECE6;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: #1A1A1A;
+    outline: none;
+    transition: box-shadow 0.2s;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.field select:focus,
+.field input[type="text"]:focus {
+    box-shadow: 0 0 0 2px #9BB8C4;
+}
+
+/* ===========================
+   SELECT FLÈCHE CUSTOM
+=========================== */
+.select-wrap {
+    position: relative;
+}
+
+.select-wrap::after {
+    content: '';
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #8A8078;
+    pointer-events: none;
+}
+
+/* ===========================
+   INPUT BUDGET AVEC PREFIXE
+=========================== */
+.input-prefix {
+    position: relative;
+}
+
+.input-prefix .prefix-symbol {
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.85rem;
+    color: #8A8078;
+    pointer-events: none;
+    font-weight: 500;
+}
+
+.input-prefix input[type="text"] {
+    padding-left: 52px;   /* ✅ corrigé : espace pour "FCFA" */
+}
+
+/* ===========================
+   LAYOUT
+=========================== */
+.spacer {
+    margin-bottom: 1.25rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* ===========================
+   BOUTON SUBMIT
+=========================== */
+.btn-submit {
+    width: 100%;
+    margin-top: 1.75rem;
+    background: #F4A460;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn-submit:hover {
+    background: #E8924A;
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+/* ===========================
+   NOTE
+=========================== */
+.note {
+    text-align: center;
+    font-size: 0.78rem;
+    color: #A09890;
+    margin-top: 0.75rem;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+.footer {
+    background-color: #727070;
+    padding: 48px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p {
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 560px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .card {
+        margin: 1rem;
+        padding: 1.5rem;
+        width: auto;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+}

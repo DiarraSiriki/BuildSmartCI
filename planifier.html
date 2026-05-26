@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="../images/favicon_io/android-chrome-512x512.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/planifier.css">
+    <title>Planifier</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../images/logobuildsmart-removebg-preview.png" alt="BuildSmart">
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="planifier.html">Planifier</a></li>
+                    <li><a href="estimation.html">Estimation</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="hero">
+            <div class="hero-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8" y="2" width="8" height="4" rx="1"/>
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                    <line x1="9" y1="12" x2="15" y2="12"/>
+                    <line x1="9" y1="16" x2="13" y2="16"/>
+                    <line x1="9" y1="8"  x2="15" y2="8"/>
+                </svg>
+            </div>
+            <h1 class="hero-title">Planifier mon projet</h1>
+            <p class="hero-subtitle">Remplissez ce formulaire pour obtenir une estimation personnalisée</p>
+        </div>
+
+        <div class="card">
+
+            <!-- Budget -->
+            <div class="field spacer">
+                <label>Budget de départ <span class="req">*</span></label>
+                <div class="input-prefix">
+                    <span class="prefix-symbol">FCFA</span>
+                    <input type="text" placeholder="0" />
+                </div>
+            </div>
+
+            <!-- Type de maison + Chambres -->
+            <div class="row spacer">
+                <div class="field">
+                    <label>Type de maison <span class="req">*</span></label>
+                    <div class="select-wrap">
+                        <select>
+                            <option value="">Sélectionner…</option>
+                            <option>Villa</option>
+                            <option>Appartement</option>
+                            <option>Duplex</option>
+                            <option>Maison individuelle</option>
+                            <option>Bungalow</option>
+                            <option>Studio</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Nombre de chambres <span class="req">*</span></label>
+                    <div class="select-wrap">
+                        <select>
+                            <option value="">Sélectionner…</option>
+                            <option>1 chambre</option>
+                            <option>2 chambres</option>
+                            <option>3 chambres</option>
+                            <option>4 chambres</option>
+                            <option>5 chambres</option>
+                            <option>6 chambres et plus</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Salles de bain + Garage -->
+            <div class="row spacer">
+                <div class="field">
+                    <label>Nombre de salles de bain <span class="req">*</span></label>
+                    <div class="select-wrap">
+                        <select>
+                            <option value="">Sélectionner…</option>
+                            <option>1 salle de bain</option>
+                            <option>2 salles de bain</option>
+                            <option>3 salles de bain</option>
+                            <option>4 salles de bain</option>
+                            <option>5 et plus</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Garage <span class="req">*</span></label>
+                    <div class="select-wrap">
+                        <select>
+                            <option value="">Sélectionner…</option>
+                            <option>Sans garage</option>
+                            <option>1 voiture</option>
+                            <option>2 voitures</option>
+                            <option>3 voitures et plus</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Piscine + Localisation -->
+            <div class="row spacer">
+                <div class="field">
+                    <label>Piscine <span class="req">*</span></label>
+                    <div class="select-wrap">
+                        <select>
+                            <option value="">Sélectionner…</option>
+                            <option>Non</option>
+                            <option>Oui — intérieure</option>
+                            <option>Oui — extérieure</option>
+                            <option>Oui — avec jacuzzi</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Localisation <span class="req">*</span></label>
+                    <div class="select-wrap">
+                        <select>
+                            <option value="">Sélectionner une région…</option>
+                            <option>Abidjan</option>
+                            <option>Bouaké</option>
+                            <option>Yamoussoukro</option>
+                            <option>San-Pédro</option>
+                            <option>Korhogo</option>
+                            <option>Daloa</option>
+                            <option>Man</option>
+                            <option>Gagnoa</option>
+                            <option>Abengourou</option>
+                            <option>Autre</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-submit" type="button">
+                Obtenir mon estimation
+            </button>
+
+            <p class="note">Réponse sous 24h — sans engagement</p>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 BuildSmart CI – Assistant intelligent de construction</p>
+    </footer>
+    <script src="js/planifier.js"></script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F0EBE3;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+header {
+    background-color: #EAD4B9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img { height: 60px; }
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin-left: 50px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #70949E;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover { color: #9B4A1B; }
+
+/* ===========================
+   MAIN
+=========================== */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 3rem;
+}
+
+/* ===========================
+   ALERTE BUDGET
+=========================== */
+.budget-alert {
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+    margin-bottom: -0.5rem;
+}
+
+.alert-ok {
+    background: #D4EDDA;
+    color: #2A6A3A;
+    border: 1px solid #A8D5B5;
+}
+
+.alert-warn {
+    background: #FDE8D8;
+    color: #9B4A1B;
+    border: 1px solid #F4C4A0;
+}
+
+/* ===========================
+   BANNER
+=========================== */
+.banner {
+    background: #9B4A1B;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.banner-label {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #F0C9A8;
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.02em;
+}
+
+.banner-amount {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3rem;
+    color: #FFFFFF;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.banner-amount span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-left: 8px;
+}
+
+.banner-sqm {
+    display: inline-block;
+    margin-top: 0.75rem;
+    background: rgba(255,255,255,0.15);
+    color: #FDEEE4;
+    font-size: 0.82rem;
+    font-weight: 400;
+    padding: 5px 14px;
+    border-radius: 20px;
+}
+
+.btn-pdf {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #FFFFFF;
+    color: #9B4A1B;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 22px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s, transform 0.1s;
+    flex-shrink: 0;
+}
+
+.btn-pdf:hover { background: #FDF0E8; }
+.btn-pdf:active { transform: scale(0.98); }
+
+.btn-pdf svg {
+    width: 18px; height: 18px;
+    stroke: #9B4A1B;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+}
+
+/* ===========================
+   GRID
+=========================== */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.card-full {
+    grid-column: 1 / -1;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+.card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 1.5rem;
+}
+
+/* ===========================
+   RÉPARTITION DES COÛTS
+=========================== */
+.cost-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.55rem 0 0.2rem;
+}
+
+.cost-item-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #3A3530;
+}
+
+.dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.dot-red   { background: #C94040; }
+.dot-blue  { background: #3A6EA8; }
+.dot-green { background: #3A7A4A; }
+
+.cost-value {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1A1A1A;
+}
+
+/* Barres de progression */
+.cost-bar-wrap {
+    height: 6px;
+    background: #F0EBE3;
+    border-radius: 4px;
+    margin: 6px 0 10px;
+    overflow: hidden;
+}
+
+.cost-bar {
+    height: 100%;
+    border-radius: 4px;
+    width: 0;
+    transition: width 1s ease;
+}
+
+.bar-red   { background: #C94040; }
+.bar-blue  { background: #3A6EA8; }
+.bar-green { background: #3A7A4A; }
+
+.cost-divider {
+    height: 0.5px;
+    background: #E8E4DE;
+    margin: 0.3rem 0;
+}
+
+/* ===========================
+   RÉCAPITULATIF
+=========================== */
+.recap-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #F0EBE3;
+    font-size: 0.88rem;
+}
+
+.recap-item:last-of-type { border-bottom: none; }
+
+.recap-label { color: #6B6560; }
+
+.recap-value {
+    font-weight: 600;
+    color: #1A1A1A;
+    text-align: right;
+    max-width: 55%;
+}
+
+.btn-modifier {
+    display: inline-block;
+    margin-top: 1.25rem;
+    font-size: 0.85rem;
+    color: #9B4A1B;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.btn-modifier:hover { opacity: 0.7; }
+
+/* ===========================
+   ÉCHÉANCIER
+=========================== */
+.phase-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 0.6rem;
+    background: #F5F2EE;
+}
+
+.phase-item:last-child { margin-bottom: 0; }
+
+.phase-icon {
+    font-size: 18px;
+    color: #6B6560;
+    flex-shrink: 0;
+}
+
+.phase-item.active .phase-icon { color: #3A6EA8; }
+
+.phase-name {
+    flex: 1;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1A1A1A;
+}
+
+.phase-item.disabled .phase-name { color: #A09890; }
+
+.phase-badge {
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 6px;
+}
+
+.badge-green { background: #D4EDDA; color: #2A6A3A; }
+.badge-blue  { background: transparent; color: #3A6EA8; }
+.badge-gray  { background: transparent; color: #A09890; }
+
+.phase-item.active {
+    border-left: 3px solid #3A6EA8;
+    border-radius: 0 10px 10px 0;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+.footer {
+    background-color: #727070;
+    padding: 48px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p {
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 640px) {
+    .banner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .banner-amount { font-size: 2rem; }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-full { grid-column: 1; }
+
+    .btn-pdf { width: 100%; justify-content: center; }
+}
