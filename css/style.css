@@ -42,26 +42,52 @@ header {
     color: #E07B39;
 }
 
+
 .hero {
+  position: relative;
   padding: 150px 80px;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url('/images/bg_accueil.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  overflow: hidden;
 }
 
-main .hero h1 {
+/* Image de fond */
+.hero .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero .hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero .hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+}
+
+/* Contenu */
+.hero .hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero .hero-content h1 {
   color: white;
   font-size: 3rem;
   margin-bottom: 20px;
 }
 
-main .hero p {
+.hero .hero-content p {
   color: white;
   font-size: 1.5rem;
 }
 
-main .hero a {
+.hero .hero-content a {
   color: #000;
   font-size: 1.5rem;
   text-decoration: none;
@@ -71,6 +97,8 @@ main .hero a {
   margin-top: 70px;
   display: inline-block;
 }
+
+
 
 /* ===========================
    SECTION POURQUOI
